@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image, Button, Icon, Segment } from 'semantic-ui-react'
+import { Image, Button, Icon, Segment, Grid } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import '../styles/Footer.css'
 import mindBody from './photodump/mindBodyWhite.png'
@@ -10,18 +10,32 @@ class Footer extends Component {
     return(
 <div className="footerWide">
 			<div className="socialLinks">
+			<Grid columns={16}>
+				<Grid.Column mobile={8} tablet={4} computer={4} className="lessPadding">
 			    <div className="facebook actualSocial">
 			    	<Icon name="facebook square" className="fbLink"/>
 			      <a className="smallMB mindBodyA" target="_blank" link href="https://www.facebook.com/TeamFTR1/"> Facebook</a>
 			    </div>
+			  </Grid.Column>
+			  <Grid.Column mobile={8} tablet={4} computer={4} className="lessPadding">
 					<div className="youtube actualSocial">
 					<Icon name="youtube play" className="youtubeLink"/>
 			      <a className="smallMB mindBodyA" target="_blank" link href="https://www.youtube.com/channel/UCkH-bLte_M7x8nIXVkCaMaQ"> YouTube </a>
 			    </div>
+			    </Grid.Column>
+			  <Grid.Column mobile={8} tablet={4} computer={4} className="lessPadding">
 			    <div className="mindBody actualSocial">
 			    	<Image src={mindBody} className="smallMB mbWhite"/>
 			      <a className="smallMB mindBodyA" target="_blank" href="https://clients.mindbodyonline.com/classic/home?studioid=280495">MindBody</a>
 			    </div>
+			    </Grid.Column>
+			  <Grid.Column mobile={8} tablet={4} computer={4} className="lessPadding">
+			    <div className="paypal actualSocial">
+					<Icon name="paypal" className="paypalLink"/>
+			      <a className="smallMB mindBodyA" target="_blank" link href="https://www.youtube.com/channel/UCkH-bLte_M7x8nIXVkCaMaQ"> Donate </a>
+			    </div>
+			   </Grid.Column>
+			   </Grid>
 			</div>
 
 

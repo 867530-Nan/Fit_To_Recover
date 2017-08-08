@@ -17,7 +17,7 @@ class NavBar extends Component {
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav>
+      <Nav pullRight>
         <MenuItem eventKey={1} href='/home'>Home</MenuItem>
       	<NavDropdown eventKey={1} title="About Us" id="basic-nav-dropdown">
           <MenuItem eventKey={1.1} href='/philosophy'>Philosophy</MenuItem>

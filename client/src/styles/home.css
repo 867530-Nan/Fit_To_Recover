@@ -1,4 +1,99 @@
+.map:hover {
+	background-color: #CC0000 !important;
+}
 
+.heading768 {
+	display: none;
+}
+
+@media (max-width: 768px){
+
+	.mountain {
+		background: linear-gradient(
+	      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../components/photodump/mountainCROP768.jpeg) top center no-repeat !important;
+		height: 310px !important;
+		justify-content: flex-start !important;
+	}
+	.heading {
+		display: none;
+	}
+	.heading768 {
+		margin: -10px;
+		display: inline-flex !important;
+	}	
+	.pEA {
+		height: 450px !important;
+		margin: 20px 0 !important;
+	}
+	.triad {
+		margin: 10px 0 !important;
+	}
+	.pTitles {
+		font-size: 24px !important;
+	}
+	.pDesc {
+		font-size: 16px !important;
+	}
+	.quadCard {
+		padding: 0px 0px !important;
+	}
+	.quadPillarsFitness {
+		height: 290px !important;
+	}
+	.quadPillarLast {
+		margin-bottom: 20px;
+	}
+	.qTitile {
+		font-size: 24px !important;
+	}
+	.qDesc {
+		font-size: 16px !important;
+	}
+	.pillarIcon {
+		height: 60px !important;
+		width: 60px !important;
+	}
+}
+
+@media (max-width: 700px){
+	.slcMap {
+		font-size: 2em !important;
+	}
+	.map {
+		padding: 5px 15px !important;
+	}
+}
+
+@media (max-width: 670px) {
+	.pEA {
+		height: 500px !important;
+	}
+}
+
+@media (max-width: 540px){
+	.slcMap {
+		font-size: 1.5em !important;
+	}
+	.map {
+		padding: 5px 10px !important;
+	}
+}
+
+@media (max-width: 430px) {
+	.fourTitle {
+		font-size: 24px !important;
+	}
+}
+
+@media (max-width: 415px){
+	.slcMap {
+		font-size: 1.3em !important;
+	}
+	.map {
+		padding: 3px 8px !important;
+	}
+}
+/*
  
 
 html, body {
@@ -9,7 +104,7 @@ h1, h3, h4 {
 	font-weight: 0;
 }
 
-/* Archivo+Black|Audiowide|Orbitron:400,500,700,900|Permanent+Marker|Righteous|Rubik:400,500,700,900|Russo+One|Work+Sans:700,900 */
+Archivo+Black|Audiowide|Orbitron:400,500,700,900|Permanent+Marker|Righteous|Rubik:400,500,700,900|Russo+One|Work+Sans:700,900
 
 .map {
 	color: white;
@@ -21,9 +116,6 @@ h1, h3, h4 {
 	margin-bottom: 5px;
 }
 
-.map:hover {
-	background-color: #CC0000;
-}
 
 a.map:hover {
 	color: white;
@@ -39,11 +131,7 @@ a.map:hover {
 	padding-top: 70px;
 }
 
-.visible-xs {
-	display: none;
-	display: flex;
-	justify-content: center;
-}
+.slcOnly {}
 
 .bottom-donate:hover {
 	background-color: none;
@@ -264,10 +352,4 @@ a.map:hover {
 
 
 
-
-
-
-
-
-
-
+*/

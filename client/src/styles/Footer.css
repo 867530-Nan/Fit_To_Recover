@@ -101,6 +101,27 @@ a.mindBodyA {
 	height: 20px;
 }
 
+.paypal.actualSocial {
+	background: #009CDE;
+	height: 36px;
+	width: 118px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: .28571429rem;
+	cursor: pointer;
+	padding: 0 20px;
+}
+
+.paypal.actualSocial:hover {
+	background: #008AC4;
+}
+
+.paypalLink {
+	font-size: 18px !important;
+	color: white;
+}
+
 .whoWeAre {
 	display: flex;
 	justify-content: center;
@@ -157,6 +178,21 @@ a.footerALinks:hover {
 @media (max-width: 768px) {
 	.footerLinks {
 		font-size: 12px;
+	}
+	.actualSocial {
+		margin: 2px auto !important;
+	}
+	.ui.grid>.column:not(.row).lessPadding {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+@media (max-width: 560px) {
+	.socialLinks {
+		height: 100px;
 	}
 }
 
