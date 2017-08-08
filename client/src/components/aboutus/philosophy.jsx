@@ -9,43 +9,39 @@ class Philosophy extends Component {
 <div>
 			<div className="top-padding"></div>
 
-			<div className="sugar-house-group-photo col-md-12">
+			<div className="sugar-house-group-photo">
 				<h1 style={styles.headline} className="philosophyHeadline">Our Philosophy</h1>
 			</div>
 
 			<div className="established" style={styles.established}>
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<h2 style={styles.estWords}>At Fit to Recover, we support one another in physical activity, community gatherings, nutritional support, and creative endeavors.</h2>
-				</div>
+					<h2 className="estWords" style={styles.estWords}>At Fit to Recover, we support one another in physical activity, community gatherings, nutritional support, and creative endeavors.</h2>
 			</div>
 
-			<Grid columns={2} divided>
-					<Grid.Row className="uniquePath">
-						<Grid.Column class="path" style={styles.uniquePath}>
-							<h4 style={styles.uniquePathWords}>Each Individual is Unique</h4>
-						</Grid.Column>
-						<Grid.Column class="path" style={styles.uniquePath}>
-							<h4 style={styles.uniquePathWords}>Following a Personal Path</h4>
-						</Grid.Column>
-					</Grid.Row>
-			</Grid>
+					<div className="uniquePath" style={styles.uniquePath}>
+						<div className="firstPath path" style={styles.path}>
+							<h4 className="uniquePathWords" style={styles.uniquePathWords}>Each Individual is Unique</h4>
+						</div>
+						<div className="path" style={styles.path}>
+							<h4 className="uniquePathWords" style={styles.uniquePathWords}>Following a Personal Path</h4>
+						</div>
+					</div>
 
 			<div className="diverse-group">
-				<h4 style={styles.story}>- We All Have a Story to Tell -</h4>
+				<h4 className="story" style={styles.story}>- We All Have a Story to Tell -</h4>
 			</div>
 
-			<div style={styles.together}>
-				<h4 style={styles.togetherWords}>Consistency + Passion = Purpose</h4>
+			<div className="together" style={styles.together}>
+				<h4 className="togetherWords" style={styles.togetherWords}>Consistency + Passion = Purpose</h4>
 			</div>
 
-			<div style={styles.pillarOverview}>
+			<div className="pillarOverview" style={styles.pillarOverview}>
 				<p>Our physical fitness is measured by progress toward individually set goals. Whether in the gym or on the field, We are mutually-supportive and win every game, regardless of the final score. We meet around the community and stare down our challenges, together.</p>
 
 				<p>Sport and exercise are balanced by creative and artistic endeavors. Many of us live on beats and raps, and there are lots of visual and word artists amongst us to round out our community. Some of our work will be shared on this website in the upcoming months.</p>
 			</div>
 
-			<div style={styles.moreInfo}>
-				<h4 style={styles.moreInfoWords}>For Membership Information click on <span style={styles.philosophyMindBody}>MindBody</span> below</h4>
+			<div className="moreInfo" style={styles.moreInfo}>
+				<h4 className="moreInfoWords" style={styles.moreInfoWords}>For Membership Information click <span className="philosophyMindBody" style={styles.philosophyMindBody}>MindBody</span> below</h4>
 			</div>
 
 </div>				
@@ -76,14 +72,18 @@ let styles = {
 	},
 	uniquePath: {
 		height: '180px',
-		display: 'flex',
+		display: 'Flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+	},
+	path: {
+		flexBasis: '50%',
 		color: 'black',
 	},
 	uniquePathWords: {
-		fontSize: '46px',
+		fontSize: '40px',
 		fontWeight: 300,
+		textAlign: 'center',
 	},
 	story: {
 		fontSize: '75px',
@@ -91,7 +91,7 @@ let styles = {
 		fontWeight: '300',
 		textAlign: 'center',
 		color: 'red',
-		textShadow: '2px 2px #999695',
+		textShadow: '1px 1px white',
 	},
 	together: {
 		height: '100px',
@@ -119,6 +119,7 @@ let styles = {
 	moreInfoWords: {
 		fontSize: '30px',
 		fontWeight: 300,
+		textAlign: 'center'
 	},
 	philosophyMindBody: {
 		fontWeight: 700,

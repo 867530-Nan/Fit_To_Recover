@@ -153,3 +153,21 @@ a.footerALinks{
 a.footerALinks:hover {
 	color: black;
 }
+
+@media (max-width: 768px) {
+	.footerLinks {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 500px) {
+	.footerLinks {
+		font-size: 10px;
+	}
+	a.bottomMailTo {
+		font-size: 10px;
+	}
+	.footerLinks {
+		margin: 0 3px;
+	}
+}
