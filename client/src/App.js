@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './components/Navbar';
+import Footer from './components/Footer'
 import './App.css';
 import History from './components/aboutus/history';
 import Philosophy from './components/aboutus/philosophy';
@@ -25,6 +26,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Home}/>
+          <Route exact path='/home' component={Home}/>
           <Route exact path='/whoweare' component={WhoWeAre}/>
           <Route exact path='/history' component={History}/>
           <Route exact path='/philosophy' component={Philosophy}/>
@@ -40,6 +42,7 @@ class App extends Component {
           <Route exact path='/newsletterarchive' component={Newsletter}/>
           <Route component={NoMatch} />
         </Switch>
+        <Footer />
       </div>
     );
   }

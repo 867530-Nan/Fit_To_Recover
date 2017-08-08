@@ -1,0 +1,50 @@
+.top-padding {
+	padding-top: 70px;
+}
+
+.sugar-house-group-photo {
+	height: 400px;
+	width: 100%;
+	background: linear-gradient(
+	      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../components/photodump/sugar-house-groupCROP.jpeg') top center no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.diverse-group {
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+	      rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),  url('../components/photodump/headshots.jpeg') center no-repeat;
+}
+
+@media (max-width: 1079px) {
+	.sugar-house-group-photo {
+		background: linear-gradient(
+		      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../components/photodump/sugar-house-group1080.jpeg') top center no-repeat;
+	}
+}
+
+@media (max-width: 992px) {
+	.sugar-house-group-photo {
+		background: linear-gradient(
+		      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../components/photodump/sugar-house-group768.jpeg') top center no-repeat;
+	}
+}
+
+@media (max-width: 768px) {
+	.sugar-house-group-photo {
+		background: linear-gradient(
+		      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../components/photodump/sugar-house-group500.jpeg') top center no-repeat;
+	}
+}
+
+@media (max-width: 500px) {
+	.sugar-house-group-photo {
+		background: linear-gradient(
+		      rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../components/photodump/sugar-house-group400.jpeg') top center no-repeat;
+	}
+}

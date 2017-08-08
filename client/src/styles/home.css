@@ -11,12 +11,24 @@ h1, h3, h4 {
 
 /* Archivo+Black|Audiowide|Orbitron:400,500,700,900|Permanent+Marker|Righteous|Rubik:400,500,700,900|Russo+One|Work+Sans:700,900 */
 
-
-.map:hover {
-	background-color: white;
-	color: red;
+.map {
+	color: white;
+	background-color: red;
+	justify-content: center;
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	margin-bottom: 5px;
 }
 
+.map:hover {
+	background-color: #CC0000;
+}
+
+a.map:hover {
+	color: white;
+}
+ 
 .mountain {	
 	height: 470px;
 	background: url('/photodump/mountainCROP.jpeg')
@@ -59,12 +71,20 @@ h1, h3, h4 {
 	border: none;
 }
 
+.triad:first-child {
+	padding-left: 14px !important;
+}
+
 .triad {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	height: 200px;
 }
+
+.ui.grid>.row>.column.triad {
+    padding-left: 2rem;
+  }
 
 .quad-pillars {
 	height: 300px;
@@ -129,7 +149,15 @@ h1, h3, h4 {
 .donate {
 	height: 400px;
 	margin-bottom: 20px;
+	border-radius: 10px;
 }
+
+.support {
+	font-size: 140px;
+	color: black;
+	font-weight: 200;
+	padding-top: 220px;
+},
 
 @media (max-width: 992px){
 	.container > .PEA {

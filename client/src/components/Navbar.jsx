@@ -1,65 +1,47 @@
 import React, { Component } from 'react'
 import { Dropdown, Icon, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Navbar, MenuItem, NavDropdown, NavItem, Nav } from 'react-bootstrap';
 import  Logo from './photodump/FTR-logo-hd-thumbnail.png';
 import '../styles/navbar.css'
 
 class NavBar extends Component {
     render() {
     return (
-      <Menu stackable fixed="top" compact="true">
-				<Menu.Item
-          name='editorials'
-          href='/'
-        >
-          Home
-        </Menu.Item>
-
-        <Dropdown name='About Us' text='About Us' pointing tabular className='link item'>
-		      <Dropdown.Menu>
-		        <Menu.Item href='/philosophy'>Philosophy</Menu.Item>
-		        <Dropdown.Divider />
-		        <Menu.Item href='/ourhistory'>Our History</Menu.Item>
-						<Dropdown.Divider />
-						<Menu.Item href="/testimonials">Testimonials</Menu.Item>
-		      </Dropdown.Menu>
-				</Dropdown>
-
-				<Dropdown name='Programs' text='Programs' pointing className='link item'>
-		      <Dropdown.Menu>
-		        <Menu.Item href='/fitness'>Fitness</Menu.Item>
-		        <Dropdown.Divider />
-		        <Menu.Item href='/creativearts'>Creative Arts</Menu.Item>
-						<Dropdown.Divider />
-						<Menu.Item href="/nutrition">Nutrition</Menu.Item>
-						<Dropdown.Divider />
-						<Menu.Item href="/communityservices">Community Service</Menu.Item>
-		      </Dropdown.Menu>
-				</Dropdown>
-
-				<Dropdown name='Media' text='Media' pointing className='link item'>
-		      <Dropdown.Menu>
-		        <Menu.Item href='/Gallery'>Gallery</Menu.Item>
-		        <Dropdown.Divider />
-		        <Menu.Item href='/newsletterarchive'>Newsletter Archive</Menu.Item>
-		      </Dropdown.Menu>
-				</Dropdown>
-
-				<Dropdown name='Team FTR' text='Team FTR' pointing className='link item'>
-		      <Dropdown.Menu>
-		      	<Menu.Item href='/currentstaff'>Current Staff</Menu.Item>
-		        <Dropdown.Divider />
-		        <Menu.Item href='/board'>Board of Directors</Menu.Item>
-		        <Dropdown.Divider />
-		        <Menu.Item href='/contact'>Contact Us</Menu.Item>
-		      </Dropdown.Menu>
-				</Dropdown>
-
-				<Menu.Item>
-					<img src={Logo}/>
-				</Menu.Item>
-      </Menu>
+      
+		<Navbar collapseOnSelect fixedTop fluid>
+    <Navbar.Header>
+      <Navbar.Brand>
+        <img href="/" src={Logo} />
+      </Navbar.Brand>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
+      <Nav>
+        <MenuItem eventKey={1} href='/home'>Home</MenuItem>
+      	<NavDropdown eventKey={1} title="About Us" id="basic-nav-dropdown">
+          <MenuItem eventKey={1.1} href='/philosophy'>Philosophy</MenuItem>
+          <MenuItem eventKey={1.2} href='/ourhistory'>Our History</MenuItem>
+          <MenuItem eventKey={1.3} href='/testimonials'>Testimonials</MenuItem>
+        </NavDropdown>
+      	<NavDropdown eventKey={2} title="Programs" id="basic-nav-dropdown">
+          <MenuItem eventKey={2.1} href='/fitness'>Fitness</MenuItem>
+          <MenuItem eventKey={2.2} href='/creativearts'>Creative Arts</MenuItem>
+          <MenuItem eventKey={2.3} href='/nutrition'>Nutrition</MenuItem>
+          <MenuItem eventKey={2.4} href='/communityservice'>Community Service</MenuItem>
+        </NavDropdown>
+     	 	<NavDropdown eventKey={3} title="Media" id="basic-nav-dropdown">
+          <MenuItem eventKey={3.1} href='/gallery'>Gallery</MenuItem>
+          <MenuItem eventKey={3.2} href='/newsletterarchive'>Newsletter Archive</MenuItem>
+        </NavDropdown>
+        <NavDropdown eventKey={4} title="Team FTR" id="basic-nav-dropdown">
+          <MenuItem eventKey={4.1} href='/currentstaff'>Current Staff</MenuItem>
+          <MenuItem eventKey={4.2} href='/board'>Board of Directors</MenuItem>
+          <MenuItem eventKey={4.3} href='/contact'>Contact Us</MenuItem>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
     )
   }
 }

@@ -13,7 +13,7 @@ class Home extends Component {
 	render() {
 		
 		return(
-<div>
+		<div>
 			<div style={styles.mountain}>
 
  				<div className="heading">
@@ -22,13 +22,20 @@ class Home extends Component {
 				
 			</div>
 			<div className="xsHidden" style={styles.slcOnly}> 
-					<h4 style={styles.slcMAP}>Salt Lake City's only Gym and Community Center for those in Recovery&nbsp;::&nbsp;<a target="_blank" style={styles.map} className="map" color="red" href="https://www.google.com/maps/place/Fit+to+Recover/@40.7399488,-111.9142314,17z/data=!4m13!1m7!3m6!1s0x8752f4da86d2a85f:0x98c2d4e4a171bc13!2s789+W+1390+S,+Salt+Lake+City,+UT+84104!3b1!8m2!3d40.7392009!4d-111.9137379!3m4!1s0x8752f4da86ddc03f:0x24d4219acbd712ad!8m2!3d40.739265!4d-111.913712">(MAP)</a></h4>
+					<h4 style={styles.slcMAP}>Salt Lake City's only Gym and Community Center for those in Recovery&nbsp;::&nbsp;
+						<a 	target="_blank"  
+								className="map" 
+								color="red" 
+								href="https://www.google.com/maps/place/Fit+to+Recover/@40.7399488,-111.9142314,17z/data=!4m13!1m7!3m6!1s0x8752f4da86d2a85f:0x98c2d4e4a171bc13!2s789+W+1390+S,+Salt+Lake+City,+UT+84104!3b1!8m2!3d40.7392009!4d-111.9137379!3m4!1s0x8752f4da86ddc03f:0x24d4219acbd712ad!8m2!3d40.739265!4d-111.913712">
+								MAP
+						</a>
+					</h4>
 			</div>
 
 				<div style={styles.pEA}>
 					<Grid columns={3} divided>
 						<Grid.Row>
-							<Grid.Column>
+							<Grid.Column className="firstPad">
 								<div className="triad xs={12}">
 									<h3 style={styles.pTitles}>Our Philosophy</h3>
 										<p style={styles.pDesc}>We're in this together, and together each of us improves and supports each others' recovery.</p>
@@ -106,9 +113,12 @@ class Home extends Component {
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
-
-			<div style={styles.donate} className="donate">
-				<div style={styles.donateWords}class=" col-md-12 col-xs-12">
+ 
+			<div style={styles.donate}>
+				<div className="support">
+					Donate
+				</div>
+				<div style={styles.donateWords} className=" col-md-12 col-xs-12">
 						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="bottom-donate">
 						<input type="hidden" name="cmd" value="_s-xclick" />
 						<input type="hidden" name="hosted_button_id" value="D2PFU4W5XAR2Y" />
@@ -117,26 +127,8 @@ class Home extends Component {
 					<p>As a non-profit, community-center, and supportive environment, We're grateful to those willing and able to support us.</p>
 						</form>
 				</div>
-			</div>
-
-			<div style={styles.footer}>
-			<Segment as="h1">
-			<div>
-			    <Button color='facebook'>
-			      <Icon name='facebook' /> Facebook
-			    </Button>
-			    <Button color='twitter'>
-			      <Icon name='twitter' /> Twitter
-			    </Button>
-					<Button color='youtube'>
-			      <Icon name='youtube' /> YouTube
-			    </Button>
-			  </div>
-			</Segment>
-			</div>
-
-				
-</div>
+			</div>			
+		</div>
 		)
 	}
 }
@@ -159,7 +151,7 @@ let styles = {
 				height: "9em",
 				textAlign: "center",
 				justifyContent: "center",
-				borderBottom: "1px solid black",
+				borderBottom: "1px solid #E7E7E8",
 			},
 			slcMAP:{
 				fontWeight: "300",
@@ -247,19 +239,26 @@ let styles = {
 			},
 			donate: {
 				display: "flex",
-				height: "400px",
-				background: "url(" + donate + ")",
+				height: "320px",
+				background: "linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1.0)), url(" + donate + ")",
 				backgroundPosition: "bottom",
 				backgroundRepeat: "no-repeat",	
 				borderRadius: "10px 10px 0 0",
 				flexDirection: "column",
 				alignItems: "center",
-				justifyContent: "flex-end",
+				justifyContent: "space-between",
 				textAlign: "center",
 			},
 			donateWords: {
 				fontSize: "20px",
-				background: "linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1.0))"
+				background: ""
+			},
+			support: {
+				fontSize: "180px",
+				color: "black",
+				fontWeight: '300',
+				paddingTop: "120px",
+
 			},
 			footer: {
 				height: "200px",
