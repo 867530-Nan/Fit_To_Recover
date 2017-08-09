@@ -5,6 +5,15 @@ class Api::TestimonialsController < ApplicationController
   	render json: Testimonial.all
   end
 
+  def create
+    testimonial = Testimonial.new(testimonial_params)
+    if testimonial.save
+      render json: testimonial
+    else
+      render json: { errors: testimonial.errors.full_messages }, status: :bad_request
+    end
+  end
+
   def update
   	if @testimonial.update(testimonial_params)
   		render json: @testimonial
@@ -20,7 +29,7 @@ class Api::TestimonialsController < ApplicationController
   private
 
   def testimonial_params
-  	params.require(:testimonial).permit(:body, :subject, :date)
+  	params.require(:testimonial).permit(:body, :subject, :date, :author)
   end
 
   def set_testimonial

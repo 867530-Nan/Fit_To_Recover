@@ -24,6 +24,7 @@ class TestimonialForm extends Component {
 		const { author, date, body, subject } = this.state;
 
 		return(
+			<div className="top-padding">
 			<Form onSubmit={this.handleSubmit}>
 		    <Form.Group widths='equal' onSubmit={this.handleSubmit} >
 		      <Form.Field>
@@ -54,27 +55,24 @@ class TestimonialForm extends Component {
 			    	onChange={this.handleChange} 
 			    	placeholder='Subject' />
 		    </Form.Field>
-		    <Form.TextArea>
-		    	<label>Share Your experience with FTR</label> 
-		    	<input 
+		    <Form.TextArea
 		    		id='body'
 		    		required 
 		    		value={body} 
 		    		onChange={this.handleChange} 
 		    		placeholder='Share your experience with FTR'
 		    		/>
-		    </Form.TextArea>
 		    <Segment>
 		    	<Button 
 			    	id='submit'
 			    	type='submit'
 			    	control={Button} 
 			    	content='Confirm' 
-			    	label='Label with htmlFor'
 			    	> Submit
 			    </Button>
 			   </Segment>
 		   </Form>
+		   </div>
 		)
 	}
   

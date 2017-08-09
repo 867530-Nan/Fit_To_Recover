@@ -19,10 +19,9 @@ ActiveRecord::Schema.define(version: 20170712041633) do
     t.string "subject"
     t.text "body"
     t.string "date"
+    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "author"
-    t.string "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
 end

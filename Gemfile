@@ -14,6 +14,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'cloudinary'
 gem 'instagram'
+gem 'will_paginate', '~> 3.1.6'
 
 
 group :development, :test do

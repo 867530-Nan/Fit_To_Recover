@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   namespace :api do
-    resources :testimonial
+    resources :testimonials
   end
 
   #Do not place any routes below this one

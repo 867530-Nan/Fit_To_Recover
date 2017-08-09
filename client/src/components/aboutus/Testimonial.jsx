@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Item } from 'semantic-ui-react'
 
-const TestimonialList = ({ testimonials }) => (
-	<div className="testimonials">
-		{ testimonials.map( test => 
-		    <Item>
+const Testimonial = ({ id, author, date, subject, body }) => (
+
+				<Item>
 		      <Item.Content>
 		        <Item.Header>{test.author}</Item.Header>
 		        <Item.Extra>{test.date}</Item.Extra>
@@ -13,14 +12,6 @@ const TestimonialList = ({ testimonials }) => (
 		        <Item.Description>{test.body}</Item.Description>
 		      </Item.Content>
 		    </Item>
-			)
-		}
-	</div>
 	)
 
-
-export default TestimonialList;
-
-
-
-
+export default Testimonial; 
