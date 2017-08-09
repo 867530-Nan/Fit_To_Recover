@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import {  } from 'react-router-dom'
 import '../../styles/philosophy.css'
-import { Grid } from 'semantic-ui-react'
+import {  } from 'semantic-ui-react'
 
 class Philosophy extends Component {
 	render() {

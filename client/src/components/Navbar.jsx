@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Dropdown, Icon, Menu } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { Navbar, MenuItem, NavDropdown, NavItem, Nav } from 'react-bootstrap';
+import { } from 'react-router-dom';
+import { Navbar, MenuItem, NavDropdown, Nav } from 'react-bootstrap';
 import  Logo from './photodump/FTR-logo-hd-thumbnail.png';
 import '../styles/navbar.css'
 
@@ -12,7 +11,7 @@ class NavBar extends Component {
 		<Navbar collapseOnSelect fixedTop fluid>
     <Navbar.Header>
       <Navbar.Brand>
-        <img href="/" src={Logo} />
+        <img href="/" src={Logo} alt="FTR Logo"/>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>

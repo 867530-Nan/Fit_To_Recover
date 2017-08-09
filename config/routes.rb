@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-	root 'static#index'
 
   namespace :api do
     get 'instagram/index', to: 'instagram#index'

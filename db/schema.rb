@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 20170712041633) do
   create_table "testimonials", force: :cascade do |t|
     t.string "subject"
     t.text "body"
-    t.date "date"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "author"
+    t.string "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
 end
