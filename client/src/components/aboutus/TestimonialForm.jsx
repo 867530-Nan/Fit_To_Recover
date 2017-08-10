@@ -3,35 +3,31 @@ import axios from 'axios'
 import { Form, Input, TextArea, Button, Segment } from 'semantic-ui-react'
 
 class TestimonialForm extends Component {
-	state = { author: '', date: '', subject: '', body: '' }
 
-	handleChange = (e) => {
-		const id = e.target.id;
-		const value = e.target.value
-		this.setState({ [id]: value})
-	}
-
-	handleSubmit = (e) => {
+	createTestimonial(e) {
 		e.preventDefault();
-		axios.post('api/testimonial', this.state)
+		const test = {
+			author:  this.author.value,
+			date: this.date.value,
+			subject: this.subject.value,
+			body: this.body.value
+		}
+		this.props.addTestimonial(test);
 	}
-
 
 
 
 	render(){
 
-		const { author, date, body, subject } = this.state;
-
 		return(
 			<div className="top-padding">
-			<Form onSubmit={this.handleSubmit}>
-		    <Form.Group widths='equal' onSubmit={this.handleSubmit} >
+			<Form ref={(input) => this.testimonialForm = input} onSubmit={(e) => this.createTestimonial(e)}>
+		    <Form.Group widths='equal' >
 		      <Form.Field>
 		      	<label>Name</label>
 		      	<input
+		      		ref={(input) => this.author = input}
 		      		id='author'
-			    		value={author} 
 							onChange={this.handleChange} 
 							placeholder="What's your name?" 
 		      		/>
@@ -39,8 +35,8 @@ class TestimonialForm extends Component {
 		      <Form.Field>
 		      	<label>Date</label>
 		      	<input
+		      		ref={(input) => this.date = input}
 		      		id='date'
-		      		value={date} 
 		      		onChange={this.handleChange} 
 		      		placeholder='When Was This?' 
 		      		/>
@@ -48,34 +44,39 @@ class TestimonialForm extends Component {
 		    </Form.Group>
 		    <Form.Field>
 			    <label>Subject</label>
-			    <input 
+			    <input
+			    	ref={(input) => this.subject = input}
 			    	required 
 			    	id="subject"
-			    	value={subject} 
 			    	onChange={this.handleChange} 
 			    	placeholder='Subject' />
 		    </Form.Field>
-		    <Form.TextArea
-		    		id='body'
-		    		required 
-		    		value={body} 
-		    		onChange={this.handleChange} 
-		    		placeholder='Share your experience with FTR'
-		    		/>
-		    <Segment>
-		    	<Button 
+		    <Form.Field>
+		    	<label>Share Message Below</label>
+		    	<input 
+		    	ref={(input) => this.body = input}
+	    		id='body'
+	    		required 
+	    		onChange={this.handleChange} 
+	    		placeholder='Share your experience with FTR'
+	    		/>
+	    	</Form.Field>
+		    	<Form.Button 
 			    	id='submit'
 			    	type='submit'
 			    	control={Button} 
 			    	content='Confirm' 
 			    	> Submit
-			    </Button>
-			   </Segment>
+			    </Form.Button>
 		   </Form>
 		   </div>
 		)
 	}
   
+}
+
+TestimonialForm.proptypes = {
+	addTestimonial: React.PropTypes.func.isRequired
 }
 
 

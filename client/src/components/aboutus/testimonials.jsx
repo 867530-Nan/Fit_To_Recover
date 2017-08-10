@@ -13,7 +13,6 @@ class Testimonials extends Component {
 	componentDidMount() {
 		axios.get('/api/testimonials')
 			.then( testimonials => this.setState({ testimonials: testimonials.data }))
-			console.log(4)
 	}
 
 	setLoaded = () => {
@@ -22,8 +21,11 @@ class Testimonials extends Component {
 
 	toggleVisibility = () => this.setState({editToggle: !this.state.editToggle})
 
-	addTestimonial = () => {
-
+	addTestimonial = (test) => {
+		const { testimonials } = this.state;
+		axios.post('/api/testimonials/', test )
+			.then ( res => this.setState({ testimonials: [...testimonials, res.data] }))
+		this.toggleVisibility();
 	}
 
 	render() {
@@ -34,7 +36,10 @@ class Testimonials extends Component {
 						<div className="testTopPhoto"> 
 							<div className="pageHeader" style={styles.pageHeader}>Testimonials</div>
 						</div>
-						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Write a Testimonial</div>
+						<div className="otherPeople" style={styles.otherPeople}>
+							<div className="otherPeopleWords" style={styles.otherPeopleWords}>Read about others' FTR experiences below</div>
+						</div>
+						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Add Your Testimonial</div>
 						<Segment padded raised>
 							<TestimonialList testimonials={this.state.testimonials} />
 						</Segment>
@@ -47,7 +52,10 @@ class Testimonials extends Component {
 						<div className="testTopPhoto"> 
 							<div className="pageHeader" style={styles.pageHeader}>Testimonials</div>
 						</div>
-						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Write a Testimonial</div>
+						<div className="otherPeople" style={styles.otherPeople}>
+							<div className="otherPeopleWords" style={styles.otherPeopleWords}>Read about others' FTR experiences below</div>
+						</div>
+						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Cancel</div>
 						<Segment padded raised>
 							<TestimonialForm addTestimonial={this.addTestimonial}/>
 						</Segment>
@@ -61,6 +69,17 @@ const styles = {
 		fontSize: '8em',
 		fontWeight: 300,
 	},
+	otherPeople: {
+		height: '100px',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	otherPeopleWords: {
+		textAlign: 'center',
+		fontSize: '40px',
+		fontWeight: 300,
+	}
 }
 
 export default Testimonials;
