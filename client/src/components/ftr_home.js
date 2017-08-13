@@ -121,7 +121,7 @@ class Home extends Component {
 			</Grid>
  
 			<div style={styles.donate}>
-				<div style={styles.donateWords}>
+				<div className="donateWords" style={styles.donateWords}>
 					<p>As a non-profit, community-center, and supportive environment, We're grateful to those willing and able to support us.</p>
 				</div>
 			</div>			

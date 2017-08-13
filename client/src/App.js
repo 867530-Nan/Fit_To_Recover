@@ -16,7 +16,6 @@ import CurrentStaff from './components/teamftr/currentstaff';
 import Gallery from './components/media/gallery';
 import Newsletter from './components/media/newsletter';
 import Home from './components/ftr_home'
-import WhoWeAre from './components/aboutus/WhoWeAre';
 import NoMatch from './components/nomatch'
 
 class App extends Component {
@@ -27,7 +26,6 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/home' component={Home}/>
-          <Route exact path='/whoweare' component={WhoWeAre}/>
           <Route exact path='/history' component={History}/>
           <Route exact path='/philosophy' component={Philosophy}/>
           <Route exact path='/testimonials' component={Testimonials}/>

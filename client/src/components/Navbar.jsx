@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { } from 'react-router-dom';
 import { Navbar, MenuItem, NavDropdown, Nav } from 'react-bootstrap';
-import  Logo from './photodump/FTR-logo-hd-thumbnail.png';
+import  Logo from './photodump/FTR-logo-NAVBAR.png';
 import '../styles/navbar.css'
 
 class NavBar extends Component {
@@ -20,7 +20,7 @@ class NavBar extends Component {
         <MenuItem eventKey={1} href='/home'>Home</MenuItem>
       	<NavDropdown eventKey={1} title="About Us" id="basic-nav-dropdown">
           <MenuItem eventKey={1.1} href='/philosophy'>Philosophy</MenuItem>
-          <MenuItem eventKey={1.2} href='/ourhistory'>Our History</MenuItem>
+          <MenuItem eventKey={1.2} href='/history'>Our History</MenuItem>
           <MenuItem eventKey={1.3} href='/testimonials'>Testimonials</MenuItem>
         </NavDropdown>
       	<NavDropdown eventKey={2} title="Programs" id="basic-nav-dropdown">
