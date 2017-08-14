@@ -13,7 +13,7 @@ class Fitness extends Component {
 		return (
 <div>
 	<div className="topFitnessPadding" style={styles.topFitnessPadding}></div>
-
+ 
 		<div className="introFitness" style={styles.introFitness}>
 			<div>
 				<h2 className="introHeader" style={styles.introHeader}>Fitness</h2>

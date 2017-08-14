@@ -37,9 +37,9 @@ class Testimonials extends Component {
 							<div className="pageHeader" style={styles.pageHeader}>Testimonials</div>
 						</div>
 						<div className="otherPeople" style={styles.otherPeople}>
-							<div className="otherPeopleWords" style={styles.otherPeopleWords}>Read about others' FTR experiences below</div>
+							<div className="otherPeopleWords" style={styles.otherPeopleWords}>Read about FTR experiences below, or add your own:</div>
 						</div>
-						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Add Your Testimonial</div>
+						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Share Your Testimonial</div>
 						<Segment padded raised>
 							<TestimonialList testimonials={this.state.testimonials} />
 						</Segment>

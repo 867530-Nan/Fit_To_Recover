@@ -11,7 +11,7 @@
 	.redstripe {
 		width: 100% !important;
 	}
-}
+}  
 	
 @media(max-width: 768px) {
 	.topPadding{ 
@@ -33,6 +33,9 @@
 	}
 	.gridWords {
 		text-align: center;
+	}
+	.gridContainer:last-child {
+		margin-bottom: 0px !important;
 	}
 	.gridContainer:nth-child(even) {
 		background-color: lightgray;

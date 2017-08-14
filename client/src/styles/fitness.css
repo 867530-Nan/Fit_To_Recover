@@ -95,3 +95,21 @@ a.middleLink:hover {
 		height: 350px;
 	}
 }
+
+@media (max-width: 415px){
+	.introHeader {
+		font-size: 2.5em !important;
+	}
+	.introEnergy{
+		font-size: 1.3em !important;
+	}
+}
+
+@media (max-width: 340px){
+	.introHeader {
+		font-size: 2.3em !important;
+	}
+	.introEnergy{
+		font-size: 1.2em !important;
+	}
+}

@@ -188,6 +188,9 @@ a.footerALinks:hover {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+	.artBox {
+		flex-basis: 50% !important;
+	}
 }
 
 @media (max-width: 560px) {
@@ -205,5 +208,11 @@ a.footerALinks:hover {
 	}
 	.footerLinks {
 		margin: 0 3px;
+	}
+}
+
+@media (max-width: 360px) {
+	.footerLinks {
+		font-size: 8px;
 	}
 }
