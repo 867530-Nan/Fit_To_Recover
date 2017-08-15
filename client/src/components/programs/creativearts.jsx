@@ -21,7 +21,7 @@ class CreativeArts extends Component {
 
 			<div className="creativeArtsStory" style={styles.creativeArtsStory}>
 				<div className="creativeArtsStoryWords" style={styles.creativeArtsStoryWords}>Every person has a story.</div>
-					<Divider basic />
+					<Divider hidden />
 				<div className="recoveryWords" style={styles.recoveryWords}>Recovery is strengthened when a person takes ownership of their story and expresses it through different media.</div>
 			</div>
 
@@ -48,10 +48,6 @@ class CreativeArts extends Component {
 				</div>
 			</div>
 
-			<div className="variousMedia" style={styles.variousMediaWords}>
-				<h2 className="variousMediaWords" style={styles.variousMediaWords}>Using the artist’s tools of poetry, prose, paint, murals, journals, sketchbooks, and the microphone, participants learn to speak, perhaps softly at first, with an empowered voice.</h2>
-			</div>
-
 			<div className="hidden-xs">
 				<div className="expression riverWriting">
 					<div className="expressionWords">Sharing stories as we do in River Writing breaks down barriers between people who believe they are different from everyone else.</div>
@@ -68,6 +64,11 @@ class CreativeArts extends Component {
 					<img className="img-responsive"  src={sketchbook} alt="Daily Sketchbook" />
 				</div>
 			</div>
+
+			<div className="variousMedia" style={styles.variousMediaWords}>
+				<h2 className="variousMediaWords" style={styles.variousMediaWords}>Using the artist’s tools of poetry, prose, paint, murals, journals, sketchbooks, and the microphone, participants learn to speak, perhaps softly at first, with an empowered voice.</h2>
+			</div>
+
 </div>
 		)
 	}
@@ -95,7 +96,7 @@ const styles = {
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
-		height: '200px'
+		height: '200px',
 	},
 	creativeArtsStoryWords:{
 		width: '84%',
@@ -120,6 +121,7 @@ const styles = {
 		display: 'flex',
 		justifyContent: 'space-around',
 		alignItems: 'center',
+		borderBottom: '1px solid lightgray',
 	},
 	artBox: {
 		borderRadius: '5px',

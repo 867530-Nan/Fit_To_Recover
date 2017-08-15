@@ -5,10 +5,10 @@ import axios from 'axios'
 
 
 class Gallery extends Component {
-	state = { photos: [ ] }
+	state = { photos: [] }
 
 	componentDidMount(){
-		axios.get('/api/instagram/index')
+		axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=254485712.1677ed0.c6d97135a2cd4de7b58795667eabd709')
 		.then( res => this.setState({ photos: res.data }))
 		.catch(err => console.log(err))
 	}
