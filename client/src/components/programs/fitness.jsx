@@ -190,6 +190,8 @@ const styles = {
 	},
 	bcPhoto: {
 		borderRadius: '2px',
+		height: '325px',
+		margin: '0 auto',
 	},
 	programDesc: {
 		flex: '1 1 60%',
