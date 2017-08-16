@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { } from 'react-router-dom'
 import '../../styles/contact.css'
-import { List, Card } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 class Contact extends Component {
 	render() {
@@ -38,7 +38,7 @@ class Contact extends Component {
 				    </Card>
 
 				    <Card color="teal" className="cardStyle" style={styles.cardStyle} fluid raised>
-				      <Card.Content as="a" href="https://nebula.wsimg.com/71dcfd481b59b7dabdd44670807d6abd?AccessKeyId=6C572ACEE6337077909C&disposition=0&alloworigin=1">
+				      <Card.Content as="a" target="_blank" rel="noopener noreferrer" href="https://nebula.wsimg.com/71dcfd481b59b7dabdd44670807d6abd?AccessKeyId=6C572ACEE6337077909C&disposition=0&alloworigin=1">
 				        <Card.Header>Spread the FTR Philosophy</Card.Header>
 				        <Card.Description>Take a Brochure with You</Card.Description>
 				      </Card.Content>
@@ -58,8 +58,7 @@ class Contact extends Component {
 
 				    <Card color="violet" className="cardStyle" style={styles.cardStyle} fluid raised>
 				      <Card.Content as="a" href="tel:801-410-8988">
-				        <Card.Header>Phone Number</Card.Header>
-				        <Card.Meta>Open Door Policy</Card.Meta>
+				        <Card.Header>Phone</Card.Header>
 				        <Card.Description as="a" >801-410-8988</Card.Description>
 				      </Card.Content>
 				    </Card>

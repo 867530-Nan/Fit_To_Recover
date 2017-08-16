@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'instapics/index'
+
+  get 'instapics/show'
+
 	root :to => 'static#index'
 
   namespace :api do

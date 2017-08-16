@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import { Form, Input, TextArea, Button, Segment } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 class TestimonialForm extends Component {
 
@@ -73,10 +72,6 @@ class TestimonialForm extends Component {
 		)
 	}
   
-}
-
-TestimonialForm.proptypes = {
-	addTestimonial: React.PropTypes.func.isRequired
 }
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { } from 'react-router-dom'
 import '../../styles/newsletter.css'
 import { Grid } from 'semantic-ui-react'
 import August2017 from '../photodump/August2017.png'

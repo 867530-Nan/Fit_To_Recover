@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React from 'react'
 import { Item, Divider } from 'semantic-ui-react'
 import '../../styles/singleTestimonial.css'
 

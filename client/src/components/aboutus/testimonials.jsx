@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { } from 'react-router-dom'
 import '../../styles/testimonials.css'
-import { Button, Loader, Item, Segment } from 'semantic-ui-react'
+import { Segment } from 'semantic-ui-react'
 import TestimonialForm from './TestimonialForm'
 import TestimonialList from './TestimonialList'
 

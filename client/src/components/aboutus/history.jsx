@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {  } from 'react-router-dom'
 import '../../styles/history.css'
-import { Grid, Image, Divider, Item, Segment, List } from 'semantic-ui-react'
+import { Grid, Image, Divider, Segment } from 'semantic-ui-react'
 import imageOne from '../photodump/good4utah.png'
 import imageTwo from '../photodump/PeoplesChoice.jpeg'
 import imageThree from '../photodump/ScoreAward.jpeg'

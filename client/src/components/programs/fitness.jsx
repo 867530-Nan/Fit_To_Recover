@@ -22,14 +22,14 @@ class Fitness extends Component {
 		</div>
 
 		<div className="fitnessPhoto">
-			<a className="middleLink topLink" style={styles.middleLink} target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/b/0/embed?mode=AGENDA&wkst=1&src=glcvge821o0rhi938tr32c9e5g@group.calendar.google.com&ctz=America/Denver">
-				<h4 className="middleLinkWords" style={styles.middleLinkWords}>Click Here for FTR's Class Calendar</h4>
+			<a className="middleLink topLink" alt="link to google calendar of fitness courses" style={styles.middleLink} target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/b/0/embed?mode=AGENDA&wkst=1&src=glcvge821o0rhi938tr32c9e5g@group.calendar.google.com&ctz=America/Denver">
+				<h4 className="middleLinkWords" style={styles.middleLinkWords}>Click Here for FTRs Class Calendar</h4>
 			</a>
-			<a href="#fitness-jump" className="glyphicon glyphicon-chevron-down" style={styles.glyphiconChevronDown}></a>
+			<a href="#fitness-jump" className="glyphicon glyphicon-chevron-down" alt="downfacing chevron" style={styles.glyphiconChevronDown}> </a>
 		</div>
 
 		<div>
-			<a name="fitness-jump"></a>
+			<a name="fitness-jump" alt="this marks the start of fitness programs"> </a>
 		</div>
 		<Grid columns={2} stackable className="programs programsBlack" style={styles.programs}>
 				<Grid.Column computer={6} tablet={8} mobile={16}>
