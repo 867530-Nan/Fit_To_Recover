@@ -17,6 +17,7 @@ import Gallery from './components/media/gallery';
 import Newsletter from './components/media/newsletter';
 import Home from './components/ftr_home'
 import NoMatch from './components/nomatch'
+import FetchPics from './components/media/fetchPics'
 
 class App extends Component {
   render() {

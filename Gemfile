@@ -17,6 +17,7 @@ gem 'httparty', '~> 0.13.7'
 
 group :development, :test do
   gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do
