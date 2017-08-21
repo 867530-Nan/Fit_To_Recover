@@ -12,12 +12,11 @@ gem 'cloudinary'
 gem 'instagram'
 gem 'will_paginate', '~> 3.1.6'
 gem 'httparty', '~> 0.13.7'
-
+gem 'dotenv-rails'
 
 
 group :development, :test do
   gem 'pry'
-  gem 'dotenv-rails'
 end
 
 group :development do

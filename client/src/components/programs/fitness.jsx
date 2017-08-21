@@ -7,6 +7,8 @@ import kettlebell from '../photodump/pushup-kettlebell.png'
 import circuit from '../photodump/Circuit-Training.png'
 import placeholder from '../photodump/placeholderImage.jpeg'
 import sportsPic from '../photodump/gallery2a.jpeg'
+import high from '../photodump/High-Fitness-Logo-1.jpg'
+import recovery from '../photodump/recovery_yoga.jpg'
 
 class Fitness extends Component {
 	render() {
@@ -49,13 +51,13 @@ class Fitness extends Component {
 		<Grid columns={2} stackable className="programs" style={styles.programs}>
 			<Grid.Column computer={6} tablet={8} mobile={16} className="oddClass" style={styles.oddClass}>
 				<div className="programPic" style={styles.programPic}>
-					<Image className="img-responsive" style={styles.bcPhoto} src={kettlebell} alt="Placeholder" />
+					<Image className="img-responsive" style={styles.bcPhoto} src={placeholder} alt="Placeholder" />
 				</div>
 			</Grid.Column>
 			<Grid.Column computer={10} tablet={8} mobile={16} className="evenClass" style={styles.evenClass}>
 				<div className="programDesc" style={styles.programDesc}>						
-					<h2 className="classHeader" style={styles.classHeader}>Kettlebells</h2>
-					<p className="classPara" style={styles.classPara}>This class is for all levels. Coaching helps, but more practice is what we need.  These classes are formatted to have a warm-up period of instruction, PRACTICE, then cool down and stretch. No matter what state your body is in, it gets healthy and strong by following the same principles. Come and learn with us.</p>
+					<h2 className="classHeader" style={styles.classHeader}>FTR Fitness</h2>
+					<p className="classPara" style={styles.classPara}>This class is for all levels, and the exercises change frequently. Exercises range from Kettlebells and Circuit Training, to strength &amp; conditioning. These classes are formatted to have a warm-up period of instruction, PRACTICE, then cool down and stretch. Come and learn with us.</p>
 				</div>
 			</Grid.Column>
 		</Grid>
@@ -70,13 +72,13 @@ class Fitness extends Component {
 		<Grid columns={2} stackable className="programs programsBlack" style={styles.programs}>
 				<Grid.Column computer={6} tablet={8} mobile={16}>
 					<div className="programPic" style={styles.programPic}>
-						<Image className="bcPhoto img-responsive" style={styles.bcPhoto} src={circuit} alt="Saturday Morning Bootcamp" />
+						<Image className="bcPhoto img-responsive" style={styles.bcPhoto} src={placeholder} alt="Saturday Morning Bootcamp" />
 					</div>
 				</Grid.Column>
 				<Grid.Column computer={10} tablet={8} mobile={16}>
 					<div className="programDesc" style={styles.programDesc}>
-						<h2 className="classHeader" style={styles.classHeaderWhite}>Circuit Training</h2>
-						<p className="classPara" style={styles.classParaWhite}>All fitness levels welcomed, providing a mixture of strength, skill, and drills ensuring a heart-pumping work out to break a sweat. This training is focused on good form for best results, rather than numbers and/or speed. The simple things bring the strength you need; no reason for complicated and intimidating movements in her classes, and she always emphasizes safety first.</p>
+						<h2 className="classHeader" style={styles.classHeaderWhite}>Capoeira (The Dance of War)</h2>
+						<p className="classPara" style={styles.classParaWhite}>Capoeira is a Brazilian martial art that combines elements of dance, acrobatics and music. It is known for its quick and complex maneuvers, predominantly using power, speed, and leverage across a wide variety of kicks, spins and techniques. All are welcome to learn and participate.</p>
 					</div>
 				</Grid.Column>
 		</Grid>
@@ -84,13 +86,13 @@ class Fitness extends Component {
 		<Grid columns={2} stackable className="programs" style={styles.programs}>
 			<Grid.Column computer={6} tablet={8} mobile={16} className="oddClass" style={styles.oddClass}>
 				<div className="programPic" style={styles.programPic}>
-					<Image className="img-responsive" style={styles.bcPhoto} src={placeholder} alt="Placeholder" />
+					<Image className="img-responsive" style={styles.bcPhoto} src={high} alt="Placeholder" />
 				</div>
 			</Grid.Column>
 			<Grid.Column computer={10} tablet={8} mobile={16} className="evenClass" style={styles.evenClass}>
 				<div className="programDesc" style={styles.programDesc}>						
-					<h2 className="classHeader" style={styles.classHeader}>Strength &amp; Conditioning</h2>
-					<p className="classPara" style={styles.classPara}>Tailored for every fitness level, this 60-minute class focuses on the general strengthening and conditioning of the body using a variety of modalities and methods including calisthenics (body weight exercises), kettlebells, barbells, medicine balls and dumbbells. Participants learn how to move better, how to prevent injury and how to increase general overall fitness. From plyometrics to sustained endurance. The class also includes a separate “prework” segment designed to improve a skill or exercise through practice and repetition with excellent form and technique.</p>
+					<h2 className="classHeader" style={styles.classHeader}>HIGH Fitness</h2>
+					<p className="classPara" style={styles.classPara}>HIGH Fitness is a hardcore, fun fitness class that incorporates aerobic interval training with music you love and intense easy to follow fitness choreography. It combines FUN (pop songs of old and new that everyone knows and loves) with INTENSITY (interval, plyometrics and cardio) with CONSISTENCY (each song has specific simple moves taught the same by all instructors). Together they make a recipe for success, repeat participation and results! HIGH Fitness produces a high caloric burn and full-body toning through its carefully formulated choreography that alternates between intense cardio peaks and toning tracks. </p>
 				</div>
 			</Grid.Column>
 		</Grid>
@@ -104,7 +106,7 @@ class Fitness extends Component {
 		<Grid columns={2} stackable className="programs programsBlack" style={styles.programs}>
 				<Grid.Column computer={6} tablet={8} mobile={16}>
 					<div className="programPic" style={styles.programPic}>
-						<Image className="bcPhoto img-responsive" style={styles.bcPhoto} src={placeholder} alt="Saturday Morning Bootcamp" />
+						<Image className="bcPhoto img-responsive" style={styles.bcPhoto} src={recovery} alt="Saturday Morning Bootcamp" />
 					</div>
 				</Grid.Column>
 				<Grid.Column computer={10} tablet={8} mobile={16}>

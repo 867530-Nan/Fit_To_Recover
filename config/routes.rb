@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'blogs/index'
+  end
+
   get 'instapics/index'
 
   get 'instapics/show'
 
   namespace :api do
     get 'instagram/index', to: 'instagram#index'
+    get 'instagram/service', to: 'instagram#service'
   end
 
 

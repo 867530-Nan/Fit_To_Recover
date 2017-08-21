@@ -31,7 +31,7 @@ class Gallery extends Component {
 						style={styles.modalInsta}
 				    trigger={<Image className="singleInsta" src={pic.images.standard_resolution.url} />}
 				  >
-		      		<Image src={pic.images.standard_resolution.url} />
+		      		<Image circular src={pic.images.standard_resolution.url} />
 		      </Modal>
 		    </div>
 			</Grid.Column>
@@ -119,7 +119,7 @@ class Gallery extends Component {
 
 					<div>
 						<a className="instaTitle" target="_blank" rel="noopener referrer" href="https://www.instagram.com/fit_2recover/?hl=en">
-							Follow Us on Instagram!
+							-- #teamFTR --
 						</a>
 					</div>
 					<Grid className="instaGrid" style={{height: '700px', width: '100%'}}>

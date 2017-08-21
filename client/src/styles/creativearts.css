@@ -19,7 +19,7 @@
 .variousMediaWords {
 	width: 85%;
 	font-weight: 300;
-	font-size: 2.5em;
+	font-size: 2em;
 	text-align: center;
 	margin: 0 auto;
 	color: #3CB371;
@@ -34,16 +34,34 @@
 	border-bottom: 1px solid lightgray;
 }
 
-.expression:last-child {
+.expressionList {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 50px;
+	border-bottom: 1px solid lightgray;
+}
+
+.expressionList {
 	border-bottom: none;
 }
 
 .expressionWords {
 	flex: 0 1 65%;
 	padding: 0 30px;
-	font-size: 2em;
+	font-size: 1.7em;
 	font-weight: 300;
 	color: #FF623F;
+	line-height: 1;
+}
+
+.expressionWordsEven {
+	flex: 0 1 65%;
+	padding: 0 30px;
+	font-size: 1.7em;
+	font-weight: 300;
+	color: #2EB962;
 	line-height: 1;
 }
 
@@ -51,6 +69,74 @@
 	height: 258px;
 	flex: 0 1 35%;
 	border-radius: 10px;
+}
+
+.riverWritingWords{
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.bottomCreativeIcons {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.bottomSingleIcon:first-child {
+	margin: 50px 0px 100px 0px !important;
+}
+ 
+.bottomSingleIcon {
+	margin: 0px 0px 100px 0px !important;
+}
+
+.creativePicFTarts {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.FTaRts {
+	margin: 0 auto;
+	margin-top: 85px;
+}
+
+.bigLetterF {
+	color: #37BD1B;
+	font-family: 'Calligraffitti';
+	font-size: 140px;
+}
+.bigLetterT {
+	color: #E27B20;
+	font-family: 'Calligraffitti';
+	font-size: 140px;
+}
+.smallLetterA {
+	color: #6C1D97;
+	font-family: 'Calligraffitti';
+	font-size: 60px;
+}
+.bigLetterR {
+	color: #DB1F31;
+	font-family: 'Calligraffitti';
+	font-size: 140px;
+}
+.smallLetterT {
+	color: #6C1D97;
+	font-family: 'Calligraffitti';
+	font-size: 60px;
+}
+.smallLetterS {
+	color: #6C1D97;
+	font-family: 'Calligraffitti';
+	font-size: 60px;
+}
+
+.outdoorsPainting{
+	width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 @media (max-width: 1224px) {
@@ -69,11 +155,38 @@
 	.recoveryWords {
 		font-size: 2em !important;
 	}
+	.expressionWords{
+		font-size: 1.4em;		
+	}
+	.expressionWordsEven{
+		font-size: 1.4em;
+	}
 }
 
 @media (max-width: 996px) {
 	.creativityHead {
 		font-size: 2.8em !important;
+	}
+	.variousMediaWords {
+		font-size: 1.6em;
+	}
+	.bigLetterF{
+		font-size: 100px
+	}
+	.bigLetterT{
+		font-size: 100px
+	}
+	.bigLetterR{
+		font-size: 100px
+	}
+	.smallLetterA{
+		font-size: 40px
+	}
+	.smallLetterT{
+		font-size: 40px
+	}
+	.smallLetterS{
+		font-size: 40px
 	}
 }
 
@@ -81,20 +194,11 @@
 	.creativityHead {
 		font-size: 2.5em !important;
 	}
-	.expressionWords {
-		font-size: 1.8em;
-	}
 }
 
 @media (max-width: 850px) {
 	.artBoxWords {
 		font-size: 2.5em !important;
-	}
-	.expressionWords {
-		font-size: 1.5em;
-	}
-	.variousMediaWords {
-		font-size: 2em;
 	}
 }
 
@@ -122,40 +226,44 @@
 		height: 200px !important;
 		border: none !important;
 	}
-}
-
-@media (max-width: 670px){
 	.variousMediaWords {
-		font-size: 1.6em;
+		font-size: 1.3em;
 	}
 }
+
 
 @media (max-width: 657px) {
 	.creativityHead {
 		font-size: 1.5em !important;
 	}
-}
-
-@media (max-width: 657px) {
-	.creativityHead {
-		font-size: 1.5em !important;
+	.creativeArtsStoryWords {
+		font-size: 2em !important;
 	}
 }
 
-@media (max-width: 530px) {
-	.creativeArtsStoryWords {
-		font-size: 2.5em !important;
+@media (max-width: 600px){
+	.variousMediaWords {
+		font-size: 1em;
 	}
 }
 
-@media (max-width: 440px) {
+@media (max-width: 486px) {
 	.creativeArtsStoryWords {
-		font-size: 2.2em !important;
+		font-size: 1.7em !important;
+	}
+	.recoveryWords {
+		font-size: 1.4em !important;
 	}
 }
 
 @media (max-width: 386px) {
 	.creativeArtsStoryWords {
 		font-size: 1.8em !important;
+	}
+}
+
+@media (max-width: 400px){
+	.variousMediaWords {
+		font-size: .9em;
 	}
 }

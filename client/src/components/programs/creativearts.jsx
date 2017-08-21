@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {  } from 'react-router-dom'
 import '../../styles/creativearts.css'
-import { Divider } from 'semantic-ui-react'
+import { Divider, List, Grid } from 'semantic-ui-react'
 import riverWriting from '../photodump/creative-writing.png'
 import groupMural from '../photodump/guys-paintings.png'
-import sketchbook from '../photodump/sketchbook.jpeg'
+import outdoors from '../photodump/outdoorsPainting.png'
 
 
 class CreativeArts extends Component {
@@ -20,7 +20,7 @@ class CreativeArts extends Component {
 			<div className="sarahPainting" style={styles.sarahPainting}></div>
 
 			<div className="creativeArtsStory" style={styles.creativeArtsStory}>
-				<div className="creativeArtsStoryWords" style={styles.creativeArtsStoryWords}>Every person has a story.</div>
+				<div className="creativeArtsStoryWords" style={styles.creativeArtsStoryWords}>In order to remain clean and clear, a lake must have inflow and outflow.</div>
 					<Divider hidden />
 				<div className="recoveryWords" style={styles.recoveryWords}>Recovery is strengthened when a person takes ownership of their story and expresses it through different media.</div>
 			</div>
@@ -50,23 +50,65 @@ class CreativeArts extends Component {
 
 			<div className="hidden-xs">
 				<div className="expression riverWriting">
-					<div className="expressionWords">Sharing stories as we do in River Writing breaks down barriers between people who believe they are different from everyone else.</div>
+					<div className="expressionWords"><span className="riverWritingWords">&#8759;River Writing&#8759;</span><br/>This class offers a healthy form of expression for those who are learning a new way of life. It offers an outlet for thoughts and feelings. It is a powerful tool in awareness. It can be used to process past events, or to create a vision for the future.</div>
 					<img className="img-responsive" src={riverWriting} alt="the words Creative Writing in unique font" />
 				</div>
 
 				<div className="expression groupMural">
 					<img className="img-responsive"  src={groupMural} alt="Group Paint Night" />
-					<div className="expressionWords">Painting a group mural brings people together in a vulnerable way to make something they can be mutually proud of.</div>
+					<div className="expressionWordsEven"><span className="riverWritingWords">&#8759;GroupPaint Night:&#8759;</span><br/>It's not just for wine drinkers anymore!  We offer one night of guided art making in an atmosphere where you can succeed and have a finished piece to be proud of.  Participants will work individually on a painting of the same composition.  </div>
 				</div>
 
-				<div className="expression sketchbook">
-					<div className="expressionWords">Keeping a journal or sketchbook encourages reflection and mindfulness in a world that can be especially overwhelming for a person in recovery.</div>
-					<img className="img-responsive"  src={sketchbook} alt="Daily Sketchbook" />
-				</div>
+				<Grid className="expressionList sketchbook">
+					<Grid.Column computer={2} tablet={2}>
+						<List>
+						  <List.Item className="bottomCreativeIcons">
+								<List.Icon color="green" className="bottomSingleIcon" size="large" name='paint brush' />
+								<List.Icon color="red" className="bottomSingleIcon" size="large" name='write' />
+								<List.Icon color="teal" className="bottomSingleIcon" size="large" name='object group' />
+								<List.Icon color="orange" className="bottomSingleIcon" size="large" name='image' />
+						  </List.Item>
+						</List>
+					</Grid.Column>
+					<Grid.Column computer={8} tablet={8}>
+						<List style={styles.creativeBottomList}>
+					    <List.Item className="bottomListIcon">
+					      <List.Header style={styles.quadTitle}>Community Service Art Making</List.Header>
+					      <List.Description style={styles.quadDescription}>At FTR we seek to carry our voices into the community! Artists at Fit To Recover have made large scale paintings as decoration for area businesses &amp; organizations</List.Description>
+					    </List.Item>
+
+					    <List.Item className="bottomListIcon">
+					      <List.Header style={styles.quadTitle}>Record Your Story</List.Header>
+					      <List.Description style={styles.quadDescription}>Using FTR's recording studio, participants are invited to record their journey of recovery. Using the River Writing practice, participants will be guided through a series of prompts to help them write down their experience of getting sober, and seeking a powerful change.</List.Description>
+					    </List.Item>
+					    
+					    <List.Item className="bottomListIcon">
+					      <List.Header style={styles.quadTitle}>Graphic Journal // Collage // Vision Board</List.Header>
+					      <List.Description style={styles.quadDescription}>We are flooded with images daily.  In this class we will couple our words with images. Making a conscious choice about what images resonate and which ones to ignore is an exercise in awareness. Participants will have a visual record of this precious time of early recovery.</List.Description>
+					    </List.Item>
+
+					    <List.Item className="bottomListIcon">
+					      <List.Header style={styles.quadTitle}>On-Site Mural // Painting made by residents</List.Header>
+					      <List.Description style={styles.quadDescription}>Leave your mark and let new people know it is possible to recover. Fit to Recover has been painted by hand by our own community. Residents develop content, and skills for painting for the final piece.</List.Description>
+					    </List.Item>
+					  </List>
+					</Grid.Column>
+					<Grid.Column computer={6} tablet={6} className="creativePicFTarts">
+						<List.Description className="FTaRts">
+							<span className="bigLetterF">F</span>
+							<span className="bigLetterT">T</span>
+							<span className="smallLetterA">a</span>
+							<span className="bigLetterR">R</span>
+							<span className="smallLetterT">t</span>
+							<span className="smallLetterS">s</span>
+						</List.Description>
+						<img className="outdoorsPainting img-responsive"  src={outdoors} alt="Daily Sketchbook" />
+					</Grid.Column>
+				</Grid>
 			</div>
 
 			<div className="variousMedia" style={styles.variousMediaWords}>
-				<h2 className="variousMediaWords" style={styles.variousMediaWords}>Using the artist’s tools of poetry, prose, paint, murals, journals, sketchbooks, and the microphone, participants learn to speak, perhaps softly at first, with an empowered voice.</h2>
+				<h2 className="variousMediaWords" style={styles.variousMediaWords}>The Creative Expression Pillar offers tools for authentic processing of life. Many addicts are bright and artistic, they just need an opportunity to devlop their voice. At Fit To Recover, we offer experiences in both visual and language arts. Pillar head Sarah Kappos graduated from the U of U with a degree in Art Education, and a burning desire to be of service. The mission of this pilar is to empower members and clients to use their voice and to cultivate mindful expression.</h2>
 			</div>
 
 </div>
@@ -102,18 +144,19 @@ const styles = {
 		width: '84%',
 		fontWeight: 300,
 		textAlign: 'center',
-		fontSize: '3em',
+		fontSize: '2.5em',
 		margin: '0 auto',
 		color: '#007FFF',
 		lineHeight: 1,
+		marginBottom: '30px',
 	},
 	recoveryWords:{
 		width: '84%',
 		fontWeight: 300,
 		textAlign: 'center',
-		fontSize: '2.5em',
+		fontSize: '2em',
 		margin: '0 auto',
-		color: '#007FFF',
+		color: '#5A00BB',
 		lineHeight: 1,
 	},
 	artClass: {
@@ -135,6 +178,19 @@ const styles = {
 	artBoxWords: {
 		fontSize: '3.2em',
 		fontWeight: 300,
+	},
+	creativeBottomList:{
+		height: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'space-around',
+		alignItems: 'center',
+	},
+	quadTitle: {
+		fontSize: '1.4em',
+	},
+	quadDescription: {
+		fontSize: '1.1em',
 	}
 }
 
