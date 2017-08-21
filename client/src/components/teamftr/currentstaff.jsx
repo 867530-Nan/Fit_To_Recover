@@ -4,7 +4,7 @@ import { } from 'react-router-dom'
 class CurrentStaff extends Component {
 	render() {
 		return (
-			<div>Current Staff Page</div>
+			<div>Really Amazing Staff Page</div>
 		)
 	}
 }
