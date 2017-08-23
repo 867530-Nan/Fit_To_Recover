@@ -1,17 +1,53 @@
 import React, { Component } from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import { Form, Button, Modal, Icon, Header } from 'semantic-ui-react'
 
 class TestimonialForm extends Component {
 
+	state = { modalOpen: false, author: '', date: '', subject: '', body: '' }
+
+  handleOpen = () => this.setState({ modalOpen: true })
+
+  handleClose = () => this.setState({ modalOpen: false })
+
+  handleAuthor = (e) => {
+    this.setState({author: e.target.value});
+  }
+
+  handleDate = (e) => {
+    this.setState({date: e.target.value});
+  }
+
+  handleSubject = (e) => {
+    this.setState({subject: e.target.value});
+  }
+
+  handleBody = (e) => {
+    this.setState({body: e.target.value});
+  }
+
 	createTestimonial(e) {
-		e.preventDefault();
 		const test = {
-			author:  this.author.value,
-			date: this.date.value,
-			subject: this.subject.value,
-			body: this.body.value
+			author:  this.state.author,
+			date: this.state.date,
+			subject: this.state.subject,
+			body: this.state.body
 		}
-		this.props.addTestimonial(test);
+		if (this.state.author === '' || this.state.date === '' || this.state.body === '') {
+		return (
+				this.handleClose()
+			)
+			} else {
+				(
+				e.preventDefault(),
+		this.props.addTestimonial(test),
+		this.handleClose()
+			)
+		}
+	}
+
+	cancelTestimonial(e){
+		e.preventDefault();
+		this.props.toggleVisibility();
 	}
 
 
@@ -20,23 +56,24 @@ class TestimonialForm extends Component {
 
 		return(
 			<div className="top-padding">
-			<Form ref={(input) => this.testimonialForm = input} onSubmit={(e) => this.createTestimonial(e)}>
+			<Form ref={(input) => this.testimonialForm = input}>
 		    <Form.Group widths='equal' >
-		      <Form.Field>
+		      <Form.Field required>
 		      	<label>Name</label>
 		      	<input
-		      		ref={(input) => this.author = input}
+
 		      		id='author'
-							onChange={this.handleChange} 
+		      		value={this.state.author}
+							onChange={this.handleAuthor} 
 							placeholder="What's your name?" 
 		      		/>
 		      </Form.Field>
-		      <Form.Field>
+		      <Form.Field required>
 		      	<label>Date</label>
 		      	<input
-		      		ref={(input) => this.date = input}
 		      		id='date'
-		      		onChange={this.handleChange} 
+		      		value={this.state.date}
+		      		onChange={this.handleDate} 
 		      		placeholder='When Was This?' 
 		      		/>
 		      </Form.Field>
@@ -44,29 +81,46 @@ class TestimonialForm extends Component {
 		    <Form.Field>
 			    <label>Subject</label>
 			    <input
-			    	ref={(input) => this.subject = input}
 			    	required 
 			    	id="subject"
-			    	onChange={this.handleChange} 
+			    	value={this.state.subject}
+			    	onChange={this.handleSubject} 
 			    	placeholder='Subject' />
 		    </Form.Field>
-		    <Form.Field>
+		    <Form.Field required>
 		    	<label>Share Message Below</label>
 		    	<input 
-		    	ref={(input) => this.body = input}
 	    		id='body'
+	    		value={this.state.body}
 	    		required 
-	    		onChange={this.handleChange} 
+	    		onChange={this.handleBody} 
 	    		placeholder='Share your experience with FTR'
 	    		/>
 	    	</Form.Field>
-		    	<Form.Button 
-			    	id='submit'
-			    	type='submit'
-			    	control={Button} 
-			    	content='Confirm' 
-			    	> Submit
-			    </Form.Button>
+	    	<Modal
+	        trigger={<Button style={{marginTop: '20px'}} onClick={this.handleOpen}>Confirm</Button>}
+	        open={this.state.modalOpen}
+	        onClose={this.handleClose}
+	        basic
+	        size='small'
+	        style={{paddingTop: '200px'}}
+	      >
+	        <Header icon='browser' content='Please Confirm Submission' />
+	        <Modal.Content>
+	          <h3>Are you sure you'd like to add this testimonial?</h3>
+	        </Modal.Content>
+	        <Modal.Actions>
+	          <Button id='submit' type='submit' control={Button} content='confirm' color='green' onClick={(e) => this.createTestimonial(e)} inverted>
+	            <Icon name='checkmark' /> Submit
+	          </Button>
+	        </Modal.Actions>
+	        <Modal.Actions>
+	          <Button color='red' onClick={(e) => this.cancelTestimonial(e) } inverted>
+	            <Icon name='remove' /> Cancel
+	          </Button>
+	        </Modal.Actions>
+	      </Modal>
+
 		   </Form>
 		   </div>
 		)

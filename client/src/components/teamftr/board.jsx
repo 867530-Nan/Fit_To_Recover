@@ -7,8 +7,8 @@ import John from '../photodump/boardJohn.jpeg'
 import Kathleen from '../photodump/boardKathleen.jpeg'
 import Mary from '../photodump/boardMary.jpeg'
 import Micah from '../photodump/boardMicah.jpeg'
-import Steve from '../photodump/boardSteve.jpeg'
-import Ian from '../photodump/ian-long-hair-headshot.jpeg'
+import Steve from '../photodump/boardSteveHD.jpg'
+import Ian from '../photodump/boardMartha.png'
 
 import '../../styles/board.css'
 

@@ -9,7 +9,7 @@ import imageFour from '../photodump/CFU_logo.png'
 import imageFive from '../photodump/Presentation.png'
 import imageSix from '../photodump/superbowl50.png'
 import imageSeven from '../photodump/gallery1.jpeg'
-import imageEight from '../photodump/thriveholidays.jpeg'
+import imageEight from '../photodump/turkeyDinner.jpg'
 import imageNine from '../photodump/30-40.jpeg'
 import imageTen from '../photodump/IanNews.png'
 import imageEleven from '../photodump/dealinindirt.jpeg'
@@ -36,12 +36,12 @@ class History extends Component {
 
 				<Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
 	      	<Grid.Column computer={5} tablet={5} mobile={16}>
-	      		<Segment basic>
+	      		<Segment as="a" href="https://youtu.be/dzX1c_V8nbI" basic>
 			     	 <Image className="singlePic" style={styles.singlePic} src={imageOne} alt="Good 4 Utah logo" />
 			      </Segment>
 					</Grid.Column>
 	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
+		      	<Segment as="a" href="https://youtu.be/dzX1c_V8nbI" basic className="gridWords" style={styles.gridWords}>
 				      <div>
 				        <div style={styles.itemDate}>February 10, 2017</div>
 				        <div style={styles.itemDesc}>Fit To Recover's 2nd Anniversary was highlighted on Good4Utah. Randall Carlisle conducted the interview and also served as MC for the Anniversary ceremony. Among the many highlights, the food was prepared in FTR's new kitchen by Chef Leslie and a wonderful crew of Food To Recover volunteers.</div>
@@ -68,12 +68,12 @@ class History extends Component {
 
 			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
 	      	<Grid.Column computer={5} tablet={5} mobile={16}>
-	      		<Segment basic>
+	      		<Segment as="a" href="https://www.score.org/fit-recover" basic>
 			     	 <Image className="singlePic" style={styles.singlePic} src={imageThree} alt="Good 4 Utah logo" />
 			      </Segment>
 					</Grid.Column>
 	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
+		      	<Segment as="a" href="https://www.score.org/fit-recover" basic className="gridWords" style={styles.gridWords}>
 				      <div>
 				        <div style={styles.itemDate}>September 15, 2016</div>
 				        <div style={styles.itemDesc}>Fit To Recover was selected as the SCORE National Community Impact Award winner for 2016. This prestigious award recognizes innovation, achievement and vision among small businesses across the United States. SCORE's mission, supported by the U.S. Small Business Administration, is to provide mentorship for American small businesses so that the business may succeed. Read, FTR's story here.</div>
@@ -105,12 +105,12 @@ class History extends Component {
 
 			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
 	      	<Grid.Column computer={5} tablet={5} mobile={16}>
-	      		<Segment basic>
+	      		<Segment as="a" href="https://nebula.wsimg.com/af4f421236eb6ea47ca2e2105c3fc6d5?AccessKeyId=6C572ACEE6337077909C&disposition=0&alloworigin=1" basic>
 			     	 <Image className="singlePic" style={styles.singlePic} src={imageFive} alt="Good 4 Utah logo" />
 			      </Segment>
 					</Grid.Column>
 	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
+		      	<Segment as="a" href="https://nebula.wsimg.com/af4f421236eb6ea47ca2e2105c3fc6d5?AccessKeyId=6C572ACEE6337077909C&disposition=0&alloworigin=1" basic className="gridWords" style={styles.gridWords}>
 				      <div>
 				        <div style={styles.itemDate}>May 2, 2016</div>
 				        <div style={styles.itemDesc}>Ian Acker and Lacey Garcia presented two workshops at the national Connecticut Conference on Addiction and Recovery (CCAR). The conference presents speakers from around the country with innovative approaches to recovery. FTR presented their four pillars of recovery: Exercise, Nutrition, Creative Expression and Service</div>
@@ -137,12 +137,12 @@ class History extends Component {
 
 			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
 	      	<Grid.Column computer={5} tablet={5} mobile={16}>
-	      		<Segment basic>
+	      		<Segment as="a" href="https://www.youtube.com/watch?v=6FCefn56X5I" basic>
 			     	 <Image className="singlePic" style={styles.singlePic} src={imageSeven} alt="Good 4 Utah logo" />
 			      </Segment>
 					</Grid.Column>
 	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
+		      	<Segment as="a" href="https://www.youtube.com/watch?v=6FCefn56X5I" basic className="gridWords" style={styles.gridWords}>
 				      <div>
 				        <div style={styles.itemDate}>January 16, 2016</div>
 				        <div style={styles.itemDesc}>Fit To Recover's First Year Anniversary. 120 Members and Friends joined together to celebrate FTR's First Anniversary. Food To Recover provided the food, Michael Kelsey, the Entertainment, and Marci Warner unveiled our new climbing wall. Click here for Channel 4's coverage of the Anniversary.  Click here for a list of our Friends and Sponsors.</div>
@@ -184,13 +184,13 @@ class History extends Component {
 			  </Grid>
 
 			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
-	      	<Grid.Column computer={5} tablet={5} mobile={16}>
+	      	<Grid.Column as="a" href="https://youtu.be/GOGSNtlWOKg" computer={5} tablet={5} mobile={16}>
 	      		<Segment basic>
 			     	 <Image className="singlePic" style={styles.singlePic} src={imageTen} alt="Good 4 Utah logo" />
 			      </Segment>
 					</Grid.Column>
 	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
+		      	<Segment  as="a" href="https://youtu.be/GOGSNtlWOKg" basic className="gridWords" style={styles.gridWords}>
 				      <div>
 				        <div style={styles.itemDate}>October 21, 2015</div>
 				        <div style={styles.itemDesc}>Ian Acker and members of the FTR Team are profiled by ABC4Utah's Nadia Crow. She tours the gym, music studio, and Food To Recover's garden, highlights FTR's service mission, and interviews members of TeamFTR.</div>
@@ -199,20 +199,20 @@ class History extends Component {
 			  	</Grid.Column>
 			  </Grid>
 
-			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
-	      	<Grid.Column computer={5} tablet={5} mobile={16}>
-	      		<Segment basic>
-			     	 <Image className="singlePic" style={styles.singlePic} src={imageEleven} alt="Good 4 Utah logo" />
-			      </Segment>
-					</Grid.Column>
-	      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
-		      	<Segment basic className="gridWords" style={styles.gridWords}>
-				      <div>
-				        <div style={styles.itemDate}>October 10, 2015</div>
-				        <div style={styles.itemDesc}>"Dealin' in Dirt" headlined FTR's first community social attended by more than 100 people, and they were rockin'. Food was provided by The Red Truck, purveyors of fabulous Peruvian food. Thanks to Francisca for organizing the event. Watch for many more community gatherings.</div>
-				      </div>
-				    </Segment>
-			  	</Grid.Column>
+			  <Grid  columns={2} stackable className="gridContainer" style={styles.gridContainer}>
+		      	<Grid.Column computer={5} tablet={5} mobile={16}>
+		      		<Segment basic>
+				     	 <Image className="singlePic" style={styles.singlePic} src={imageEleven} alt="Good 4 Utah logo" />
+				      </Segment>
+						</Grid.Column>
+		      	<Grid.Column computer={11} tablet={11} mobile={16} className="wordsContainer" style={styles.wordsContainer}>
+			      	<Segment basic className="gridWords" style={styles.gridWords}>
+					      <div>
+					        <div style={styles.itemDate}>October 10, 2015</div>
+					        <div style={styles.itemDesc}>"Dealin' in Dirt" headlined FTR's first community social attended by more than 100 people, and they were rockin'. Food was provided by The Red Truck, purveyors of fabulous Peruvian food. Thanks to Francisca for organizing the event. Watch for many more community gatherings.</div>
+					      </div>
+					    </Segment>
+				  	</Grid.Column>
 			  </Grid>
 			  <Grid columns={2} stackable className="gridContainer" style={styles.gridContainer}>
 	      	<Grid.Column computer={5} tablet={5} mobile={16}>

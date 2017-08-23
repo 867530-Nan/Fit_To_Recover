@@ -39,14 +39,34 @@ class CommunityService extends Component {
 			</div>
 		</div>
 
+		<div className="howWeServe">How We Serve:</div>
+
 		<div className="whatWeDo" style={styles.whatWeDo}>
 			<div className="whatWeDoLeft">
-				<div className="whatWeDoText">How We Serve:</div>
+				<div className="whatWeDoText">Around The Gym:</div>
 			</div>
 			<div className="whatWeDoRight">
-				<div className="serviceMeansText">At FTR,<br />Service means reaching out to strangers, picking up after yourself, giving someone a ride, or simply cleaning the gym.</div>
-				<div className="serviceMeansTreat">Treating others the way you want to be treated, at all times.</div>
-				<div className="serviceMeansTreat">Volunteer efforts are eligible towards community service credit.</div>
+				<div className="serviceMeansText">Service means reaching out to strangers, picking up after yourself, giving someone a ride, or simply cleaning the gym.
+																					<br /><br />Treating others the way you want to be treated, at all times.</div>
+			</div>
+		</div>
+
+		<div className="whatWeDo" style={styles.whatWeDo}>
+			<div className="whatWeDoLeftWomens">
+				<div className="whatWeDoText">Women's Group</div>
+			</div>
+			<div className="whatWeDoRightWomens">
+				<div className="serviceMeansText">Providing a safe place for women to discuss issues, receive feedback, and share experiences of strength and hope with other women. 
+				It is crucial to form bonds and friendships with other women in recovery.<br /><br /> Thursdays: 7-8pm @ FTR</div>
+			</div>
+		</div>
+
+		<div className="whatWeDo" style={styles.whatWeDo}>
+			<div className="whatWeDoLeftCommunity">
+				<div className="whatWeDoText">In The Community</div>
+			</div>
+			<div className="whatWeDoRightCommunity">
+				<div className="serviceMeansText">We're giving back through serving the homeless, clothing drives, Hike for Mental Health, Relay for Life, Safe Kids Fair, and dozens of other activitities around our community.</div>
 			</div>
 		</div>
 
@@ -55,27 +75,17 @@ class CommunityService extends Component {
 			{ this.displayImages() }
 		</Grid>	
 
-		<div className="alwaysHappening">
-			<a className="aService" href="mailto:ftr@fit2recover.org">
-				Service opportunities are always happening, please email us for more information
-				<Icon name="mail outline" style={{marginLeft: '15px'}} color='white' />
-			</a>
-		</div>
-
 		<div style={styles.whereWe} className="hidden-xs">
 			<div style={styles.whereWeWords}>
-				In Recovery, dedicating time &amp; effort to a greater cause, without any personal gain, it allows us to change our mentality of the self-seeking thoughts | actions we once had.
+				In Recovery, dedicating time &amp; effort to a greater cause, without any personal gain, allows us to change our mentality of the self-seeking thoughts & actions we once had.
 			</div>
 		</div>
 
-		<div style={styles.womensGroup}>
-			<div className="womensGroupTitle" style={styles.womensGroupTitle}>
-				Women's Group
-			</div>
-			<div className="womensGroupWords" style={styles.womensGroupWords}>
-				Providing a safe place for women to discuss issues, receive feedback, and share experiences of strength and hope with other women. 
-				It is crucial to form bonds and friendships with other women in recovery.<br /><br /> Thursdays: 7-8pm @ FTR
-			</div>
+		<div className="alwaysHappening">
+			<a className="aService" href="mailto:ftr@fit2recover.org">
+				Service opportunities are always happening, email us for more information.
+				<Icon name="mail outline" style={{marginLeft: '15px'}} color='white' />
+			</a>
 		</div>
 
 </div>

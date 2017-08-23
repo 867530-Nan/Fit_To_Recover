@@ -8,7 +8,7 @@ import TestimonialList from './TestimonialList'
 
 
 class Testimonials extends Component {
-	state = { testimonials: [], editToggle: false }
+	state = { testimonials: [], editToggle: false} 
 
 	componentDidMount() {
 		axios.get('/api/testimonials')
@@ -57,7 +57,7 @@ class Testimonials extends Component {
 						</div>
 						<div className="writeTestimonialButton" style={styles.writeTestimonialButton} onClick={this.toggleVisibility}>Cancel</div>
 						<Segment padded raised>
-							<TestimonialForm addTestimonial={this.addTestimonial}/>
+							<TestimonialForm addTestimonial={this.addTestimonial} toggleVisibility={this.toggleVisibility}/>
 						</Segment>
 					</div>
 		)

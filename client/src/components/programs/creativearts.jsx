@@ -50,13 +50,13 @@ class CreativeArts extends Component {
 
 			<div className="hidden-xs">
 				<div className="expression riverWriting">
-					<div className="expressionWords"><span className="riverWritingWords">&#8759;River Writing&#8759;</span><br/>This class offers a healthy form of expression for those who are learning a new way of life. It offers an outlet for thoughts and feelings. It is a powerful tool in awareness. It can be used to process past events, or to create a vision for the future.</div>
+					<div className="expressionWords"><span className="riverWritingWords">River Writing</span><br/>This class offers a healthy form of expression for those who are learning a new way of life. It offers an outlet for thoughts and feelings. It is a powerful tool in awareness. It can be used to process past events, or to create a vision for the future.</div>
 					<img className="img-responsive" src={riverWriting} alt="the words Creative Writing in unique font" />
 				</div>
 
 				<div className="expression groupMural">
 					<img className="img-responsive"  src={groupMural} alt="Group Paint Night" />
-					<div className="expressionWordsEven"><span className="riverWritingWords">&#8759;GroupPaint Night:&#8759;</span><br/>It's not just for wine drinkers anymore!  We offer one night of guided art making in an atmosphere where you can succeed and have a finished piece to be proud of.  Participants will work individually on a painting of the same composition.  </div>
+					<div className="expressionWordsEven"><span className="riverWritingWords">GroupPaint Night</span><br/>It's not just for wine drinkers anymore!  We offer one night of guided art making in an atmosphere where you can succeed and have a finished piece to be proud of.  Participants will work individually on a painting of the same composition.  </div>
 				</div>
 
 				<Grid className="expressionList sketchbook">
@@ -94,14 +94,7 @@ class CreativeArts extends Component {
 					  </List>
 					</Grid.Column>
 					<Grid.Column computer={6} tablet={6} className="creativePicFTarts">
-						<List.Description className="FTaRts">
-							<span className="bigLetterF">F</span>
-							<span className="bigLetterT">T</span>
-							<span className="smallLetterA">a</span>
-							<span className="bigLetterR">R</span>
-							<span className="smallLetterT">t</span>
-							<span className="smallLetterS">s</span>
-						</List.Description>
+						
 						<img className="outdoorsPainting img-responsive"  src={outdoors} alt="Daily Sketchbook" />
 					</Grid.Column>
 				</Grid>
