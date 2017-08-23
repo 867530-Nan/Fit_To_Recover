@@ -12,10 +12,10 @@ gem 'cloudinary'
 gem 'instagram'
 gem 'will_paginate', '~> 3.1.6'
 gem 'httparty', '~> 0.13.7'
-gem 'dotenv-rails'
-
+gem 'google-api-client', '~> 0.11', require: 'google/apis/calendar_v3'
 
 group :development, :test do
+	gem 'dotenv-rails'
   gem 'pry'
 end
 

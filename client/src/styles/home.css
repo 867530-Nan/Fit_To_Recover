@@ -5,6 +5,31 @@
 .heading768 {
 	display: none;
 }
+a.creativeButton:hover {
+	background-color: #332df7;
+	color: white !important;
+}
+
+a.fitnessButton:hover {
+	background-color: #f90101;
+	color: white !important;
+}
+
+a.serviceButton:hover {
+	background-color: #8e44ad;
+	color: white !important;
+}
+
+a.nutritionButton:hover {
+	background-color: #349c09;
+	color: white !important;
+}
+
+
+
+
+
+
 
 @media (max-width: 768px){
 

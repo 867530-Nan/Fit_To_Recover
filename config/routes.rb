@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :apid do
+    get 'calendars/index', to: 'calendars#index'
+  end
+
   namespace :api do
     get 'blogs/index'
   end

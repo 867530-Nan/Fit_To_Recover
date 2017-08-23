@@ -10,14 +10,17 @@ class NavBar extends Component {
       
 		<Navbar collapseOnSelect fixedTop fluid>
     <Navbar.Header>
-      <Navbar.Brand>
-        <img href="/" src={Logo} alt="FTR Logo"/>
+      <Navbar.Brand >
+        <a href="/">
+          <img style={{height: '100%'}} src={Logo} alt="FTR Logo"/>
+        </a>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
         <MenuItem eventKey={1} href='/home'>Home</MenuItem>
+        <MenuItem eventKey={1} href='/calendar'>Calendar</MenuItem>
       	<NavDropdown eventKey={1} title="About Us" id="basic-nav-dropdown">
           <MenuItem eventKey={1.1} href='/philosophy'>Philosophy</MenuItem>
           <MenuItem eventKey={1.2} href='/history'>Our History</MenuItem>

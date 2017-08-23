@@ -17,6 +17,8 @@ import Gallery from './components/media/gallery';
 import Newsletter from './components/media/newsletter';
 import Home from './components/ftr_home'
 import NoMatch from './components/nomatch'
+import Calendar from './components/calendar'
+
 
 class App extends Component {
   render() {
@@ -25,6 +27,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Home}/>
+          <Route exact path='/calendar' component={Calendar}/>
           <Route exact path='/home' component={Home}/>
           <Route exact path='/history' component={History}/>
           <Route exact path='/philosophy' component={Philosophy}/>

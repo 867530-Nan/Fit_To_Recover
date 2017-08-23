@@ -2,35 +2,32 @@ import React, { Component } from 'react'
 import {  } from 'react-router-dom'
 import axios from 'axios'
 import '../../styles/nutrition.css'
-import { Grid, Image, Comment, Icon, Loader, Segment, Dimmer } from 'semantic-ui-react'
+import { Grid, Image, Item, Icon, Loader, Segment, Dimmer } from 'semantic-ui-react'
 import thumbnail from '../photodump/gallery4c.jpeg'
 import moment from 'moment';
 
 
 class Nutrition extends Component {
-	state = { posts: [], loaded: true }
+	state = { posts: [], loaded: false }
 
-	// componentDidMount() {
-	// 	axios.get('api/blogs/index')
-	// 	.then( res => this.setState({ posts: res.data, loaded: true }) )
-	// }
+	componentDidMount() {
+		axios.get('api/blogs/index')
+		.then( res => this.setState({ posts: res.data, loaded: true }) )
+	}
 
-	// displayPosts = () => {
-	// 	return this.state.posts.items.map( post =>
-	// 		<Comment className="singlePostEntire">
-	//       <Comment.Avatar as='a' src={thumbnail} />
-	//       <Comment.Content as='a' href={post.url}>
-	//         <Comment.Author> { post.title } </Comment.Author>
-	//         <Comment.Metadata>
-	//           <div> { moment(post.published).format("dddd, MMMM Do YYYY") } </div>
-	//         </Comment.Metadata>
-	//         <Comment.Text className="singlePostContent">
-	//           { post.content }
-	//         </Comment.Text>
-	//       </Comment.Content>
-	//     </Comment>
-	// 		)
-	// }
+	displayPosts = () => {
+		return this.state.posts.items.map( post =>
+			<Item className="singlePostEntire">
+	      <Item.Image className="blogPic" as='a' src={ post.images[0].url } />
+	      <Item.Content className="blogContent" as='a' href={post.url}>
+	        <Item.Header> { post.title } </Item.Header>
+	        <Item.Description className="singlePostContent">
+	          { moment(post.published).format("dddd, MMMM Do YYYY") }
+	        </Item.Description>
+	      </Item.Content>
+	    </Item>
+			)
+	}
 
 	render() {
 		if(this.state.loaded){
@@ -73,114 +70,10 @@ class Nutrition extends Component {
 					</Grid.Column>
 
 					<Grid.Column computer={5} tablet={5} mobile={16}> 
-						<div className="blogTitle"><Icon name="feed" color="green" /> Food To Recover Blogposts </div>
-						<Comment.Group style={styles.commentGroup}>
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-			    		<Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-					    <Comment className="singlePostEntire">
-					      <Comment.Avatar as='a' src={thumbnail} />
-					      <Comment.Content as='a'>
-					        <Comment.Author> Title of Blog </Comment.Author>
-					        <Comment.Metadata>
-					          <div> Date of Blog</div>
-					        </Comment.Metadata>
-					        <Comment.Text className="singlePostContent">
-					         	blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost blogpost 
-					        </Comment.Text>
-					      </Comment.Content>
-					    </Comment>
-
-
-					  </Comment.Group>
+						<div className="blogTitle"><a style={{color: 'black'}} href="http://food2recover.blogspot.com/"><Icon style={{marginTop: '10px'}} name="feed" color="green" /> Food To Recover Blogposts </a></div>
+						<Item.Group style={styles.commentGroup}>
+							{ this.displayPosts() }	
+					  </Item.Group>
 
 					</Grid.Column>
 
@@ -205,9 +98,10 @@ const styles = {
 		paddingTop: '65px',
 	},
 	commentGroup: {
-		border: '1px solid black', 
+		borderRadius: '20px',
+		backgroundColor: '#99E889', 
 		padding: '14px', 
-		height: '100%', 
+		height: '96%', 
 		margin: '5px'
 	},
 }
